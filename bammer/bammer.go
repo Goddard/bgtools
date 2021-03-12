@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	bg "github.com/goddard/bgfileformats"
 	"image"
 	"image/gif"
 	"log"
@@ -9,7 +10,6 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/Beamdog/bgfileformats"
 	//	"github.com/davecheney/profile"
 )
 
@@ -17,8 +17,8 @@ var input = flag.String("input", "input.bam", "Source [bam, bamd, gif]")
 var output = flag.String("output", "out", "Output Directory/Filename")
 var palette = flag.String("palette", "palette.png", "Palette to use for the bam")
 var mirror = flag.Bool("mirror", false, "Set to true to mirror all the frames")
-var offset_x = flag.Int("offsetx", 0, "Offset all exported frames in X direction")
-var offset_y = flag.Int("offsety", 0, "Offset all exported frames in Y direction")
+var offsetX = flag.Int("offsetx", 0, "Offset all exported frames in X direction")
+var offsetY = flag.Int("offsety", 0, "Offset all exported frames in Y direction")
 var mode = flag.String("mode", "bamd", "Output format[bamd, gif]")
 
 func main() {
@@ -43,7 +43,7 @@ func main() {
 				log.Fatal(err)
 			}
 		} else if *mode == "bamd" {
-			bamIn.MakeBamd(filepath.Clean(*output), outputName, *mirror, *offset_x, *offset_y)
+			bamIn.MakeBamd(filepath.Clean(*output), outputName, *mirror, *offsetX, *offsetY)
 		} else {
 			log.Fatal("Unknown output mode: %s\n", *mode)
 		}
