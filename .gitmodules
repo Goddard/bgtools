@@ -1,0 +1,3 @@
+[submodule "github/bgfileformats"]
+	path = github/bgfileformats
+	url = https://github.com/Goddard/bgfileformats
