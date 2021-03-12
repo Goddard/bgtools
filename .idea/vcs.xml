@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bammer/bgfileformats" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bammer/lzma" vcs="hg4idea" />
+    <mapping directory="$PROJECT_DIR$/github.com/goddard/lzma" vcs="hg4idea" />
     <mapping directory="$PROJECT_DIR$/github/bgfileformats" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/github/lzma" vcs="hg4idea" />
   </component>

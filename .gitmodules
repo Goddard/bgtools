@@ -1,6 +1,0 @@
-[submodule "github/bgfileformats"]
-	path = github.com/goddard/bgfileformats
-	url = https://github.com/Goddard/bgfileformats
-[submodule "github/lzma"]
-	path = github.com/goddard/lzma
-	url = https://github.com/Goddard/lzma
